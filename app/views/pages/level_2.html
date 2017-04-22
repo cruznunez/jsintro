@@ -1,0 +1,34 @@
+<p>Paragraph 1</p>
+<p id="mid">Paragraph 2</p>
+<p>Paragraph 3</p>
+
+<div id="capitalize">Dinosaurs</div>
+<div>Once there was a <span id="italicize">large</span> dinosaur...</div>
+<div>Then a meteor fell. It <span id="bold">died</span>.</div>
+
+
+<script>
+  function myFunction(params) {
+    var paragraphs = document.getElementsByTagName('p');
+    var len = paragraphs.length;
+
+    console.log('There are ' + len + ' paragraphs on this page');
+
+    paragraphs[len - 1].style.color = 'red';
+
+    var mid = document.getElementById('mid');
+    var mid_val = mid.innerHTML;
+
+    mid.innerHTML = "I'm the captain now.";
+
+    for (i = 0; i < len; i++) {
+      paragraphs[i].style.fontSize = '10px';
+    };
+
+    document.getElementById('capitalize').style.textTransform = 'uppercase';
+    document.getElementById('italicize').style.fontStyle = 'italic';
+    document.getElementById('bold').style.fontWeight = 'bold';
+  };
+
+  myFunction();
+</script>

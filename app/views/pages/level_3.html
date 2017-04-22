@@ -1,0 +1,25 @@
+<p>
+  Number: <span id="num">0</span>
+</p>
+
+<button id="up" type="button">Up</button>
+<button id="down" type="button">Down</button>
+
+<script>
+  function myFunction() {
+    var num = document.getElementById('num');
+
+    function up1() {
+      var n = parseInt(num.innerHTML);
+      num.innerHTML = n + 1;
+    }
+    function down1() {
+      num.innerHTML = num.innerHTML - 1;
+    }
+
+    document.getElementById('up').onclick = up1;
+    document.getElementById('down').onclick = down1;
+  };
+
+  myFunction();
+</script>
